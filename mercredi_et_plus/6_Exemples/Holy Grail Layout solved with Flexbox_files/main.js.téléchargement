@@ -1,0 +1,40 @@
+( function( window, document, undefined ){
+
+	/**
+	 * Code Highlight
+	 * 
+	 * @author: Geoffrey
+	 */
+	if ( hljs ) {
+		hljs.initHighlightingOnLoad();
+	}
+
+
+	/**
+	 * Triple click to select all the code block content
+	 *
+	 * @author: Geoffrey
+	 */
+	let code_blocks = document.querySelectorAll('.code');
+	
+	if ( code_blocks ) {
+		code_blocks.forEach( function( el ) {
+
+			el.addEventListener( 'click', function ( e ) {
+				if ( e.detail === 3 ) {
+					if ( document.selection ) {
+						let range = document.body.createTextRange();
+						range.moveToElementText( this );
+						range.select();
+					} else if ( window.getSelection ) {
+						let range = document.createRange();
+						range.selectNode( this );
+						window.getSelection().addRange( range );
+					}
+				}
+			} );
+
+		} );
+	}
+
+} )( window, document );

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://fr.acervolima.com/difference-entre-css-grid-et-css-flexbox/ -->
+<html lang="fr-FR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Différence entre CSS Grid et CSS Flexbox – Acervo Lima</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Acervo Lima » Flux" href="https://fr.acervolima.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Acervo Lima » Flux des commentaires" href="https://fr.acervolima.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Acervo Lima » Différence entre CSS Grid et CSS Flexbox Flux des commentaires" href="https://fr.acervolima.com/difference-entre-css-grid-et-css-flexbox/feed/">
+<script src="./3_Différence entre CSS Grid et CSS Flexbox_files/f.txt"></script><script src="./3_Différence entre CSS Grid et CSS Flexbox_files/f(1).txt"></script><script src="./3_Différence entre CSS Grid et CSS Flexbox_files/f(2).txt" id="google_shimpl"></script><script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/fr.acervolima.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="./3_Différence entre CSS Grid et CSS Flexbox_files/wp-emoji-release.min.js.téléchargement" type="text/javascript" defer=""></script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./3_Différence entre CSS Grid et CSS Flexbox_files/style.min.css" media="all">
+<style id="wp-block-library-theme-inline-css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-pullquote{border-top:4px solid;border-bottom:4px solid;margin-bottom:1.75em;color:currentColor}.wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;text-transform:uppercase;font-size:.8125em;font-style:normal}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;position:relative;font-style:normal}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{padding:.5em;border:1px solid;word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-template-part.has-background{padding:1.25em 2.375em;margin-top:0;margin-bottom:0}
+</style>
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="stylesheet" id="parent-style-css" href="./3_Différence entre CSS Grid et CSS Flexbox_files/style.css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./3_Différence entre CSS Grid et CSS Flexbox_files/all.min.css" media="all">
+<link rel="stylesheet" id="dan-style-css" href="./3_Différence entre CSS Grid et CSS Flexbox_files/style(1).css" media="all">
+<link rel="stylesheet" id="dan-block-style-css" href="./3_Différence entre CSS Grid et CSS Flexbox_files/blocks.css" media="all">
+<script src="./3_Différence entre CSS Grid et CSS Flexbox_files/jquery.min.js.téléchargement" id="jquery-core-js"></script>
+<script src="./3_Différence entre CSS Grid et CSS Flexbox_files/jquery-migrate.min.js.téléchargement" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://fr.acervolima.com/wp-json/"><link rel="alternate" type="application/json" href="https://fr.acervolima.com/wp-json/wp/v2/posts/19173"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fr.acervolima.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://fr.acervolima.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 6.0.2">
+<link rel="canonical" href="https://fr.acervolima.com/difference-entre-css-grid-et-css-flexbox/">
+<link rel="shortlink" href="https://fr.acervolima.com/?p=19173">
+<link rel="alternate" type="application/json+oembed" href="https://fr.acervolima.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffr.acervolima.com%2Fdifference-entre-css-grid-et-css-flexbox%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://fr.acervolima.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffr.acervolima.com%2Fdifference-entre-css-grid-et-css-flexbox%2F&amp;format=xml">
+<link rel="pingback" href="https://fr.acervolima.com/xmlrpc.php"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./3_Différence entre CSS Grid et CSS Flexbox_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N0YQX4YWRC');
+</script>
+
+<!--Google adsense-->
+<script data-ad-client="ca-pub-7274418547299766" async="" src="./3_Différence entre CSS Grid et CSS Flexbox_files/f(3).txt" data-checked-head="true"></script><link rel="icon" href="https://fr.acervolima.com/wp-content/uploads/2022/08/cropped-favicon-acervo-lima-32x32.png" sizes="32x32">
+<link rel="icon" href="https://fr.acervolima.com/wp-content/uploads/2022/08/cropped-favicon-acervo-lima-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://fr.acervolima.com/wp-content/uploads/2022/08/cropped-favicon-acervo-lima-180x180.png">
+<meta name="msapplication-TileImage" content="https://fr.acervolima.com/wp-content/uploads/2022/08/cropped-favicon-acervo-lima-270x270.png">
+		<style id="wp-custom-css">
+			div.note {
+    border-color: #17a2b8;
+}
+
+.creditos {
+    margin: 1.5625em auto;
+    overflow: hidden;
+    page-break-inside: avoid;
+    border-left: .3rem solid;
+    border-radius: .1rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .05rem rgba(0,0,0,.1);
+    transition: color .25s,background-color .25s,border-color .25s;
+}
+
+div.note > p:first-child {
+    background-color: rgba(23, 162, 184, .1);
+}
+
+div.creditos > p:first-child {
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+div.creditos > p {
+    padding: 5px 0px 5px 1rem;
+}		</style>
+		<meta http-equiv="origin-trial" content="A+cA2PUOfIOKAdSDJOW5CP9ZlxONy1yu+hqAq72zUtKw4rLdihqRp6Nui/jUyCyegr+BUtH+C+Elv0ufn05yBQEAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+zsdH3aNZT/bkjT8U/o5ACzyaeNYzTvtoVmwf/KOilfv39pxY2AIsOwhQJv+YnXp98i3TqrQibIVtMWs5UHjgoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxceVEhIegcDEHqLXFQ2+vPKqzCppoJYsRCZ/BdfVnbM/sUUF2BXV8lwNosyYjvoxnTh2FC8cOlAnA5uULr/zAUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="./3_Différence entre CSS Grid et CSS Flexbox_files/f(4).txt" as="script"><script type="text/javascript" src="./3_Différence entre CSS Grid et CSS Flexbox_files/f(4).txt"></script><link rel="preload" href="./3_Différence entre CSS Grid et CSS Flexbox_files/f(5).txt" as="script"><script type="text/javascript" src="./3_Différence entre CSS Grid et CSS Flexbox_files/f(5).txt"></script><link rel="preload" href="./3_Différence entre CSS Grid et CSS Flexbox_files/f(4).txt" as="script"><script type="text/javascript" src="./3_Différence entre CSS Grid et CSS Flexbox_files/f(4).txt"></script><link rel="preload" href="./3_Différence entre CSS Grid et CSS Flexbox_files/f(5).txt" as="script"><script type="text/javascript" src="./3_Différence entre CSS Grid et CSS Flexbox_files/f(5).txt"></script></head>
+
+<body class="post-template-default single single-post postid-19173 single-format-standard wp-embed-responsive has-sidebar colors-gray" aria-hidden="false" style="padding: 0px 0px 120px;">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="https://fr.acervolima.com/difference-entre-css-grid-et-css-flexbox/#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			
+							<div class="site-title"><a href="https://fr.acervolima.com/" rel="home">Acervo Lima</a></div>
+					</div><!-- .site-branding -->
+
+		
+		
+			</header><!-- #masthead -->
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+
+	
+<article id="post-19173" class="entry post-19173 post type-post status-publish format-standard hentry category-css category-css-properties category-picked category-technical-scripter category-technical-scripter-2020">
+	<header class="entry-header">
+		<h1 class="entry-title">Différence entre CSS Grid et CSS Flexbox</h1>		<div class="entry-meta">
+			<span class="posted-on"><span class="fas fa-clock fa-fw" aria-hidden="true"></span><span class="screen-reader-text">Posted on</span> <a href="https://fr.acervolima.com/difference-entre-css-grid-et-css-flexbox/" rel="bookmark"><time class="entry-date published updated" datetime="2022-07-05T21:22:47-03:00">5 de juillet de 2022</time></a></span><span class="byline"><span class="fas fa-user-circle fa-fw" aria-hidden="true"></span><span class="screen-reader-text">by</span> <span class="author vcard"><a class="url fn n" href="https://fr.acervolima.com/author/jack_sparrow/">Jack Sparrow</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		<p><strong><a href="https://fr.acervolima.com/css-propriete-de-grille/">Grid</a> :</strong> CSS Grid Layout, est un système de mise en page basé sur une grille bidimensionnelle avec des lignes et des colonnes, facilitant la conception de pages Web sans avoir à utiliser de flotteurs et de positionnement. Comme les arrayx, la disposition en grille nous permet d’aligner les éléments en colonnes et en lignes.</p>
+<p>Pour commencer, vous devez définir un élément conteneur en tant que grille avec <strong>display: grid,</strong> définir les tailles de colonne et de ligne avec grid-template-columns et grid-template-rows, puis placer ses éléments enfants dans la grille avec grid-column et ligne de grille.</p>
+<p><strong>Exemple:</strong></p>
+<div class="blocos-linguagens">
+<div class="bloco-linguagem">
+<h2>HTML</h2>
+<pre class="codigo">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.main{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: grid;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: grid;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid: auto auto / auto auto auto auto;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid-gap: 10px;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: green;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.gfg {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: rgb(255, 255, 255);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 25px 0;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 30px;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 style="text-align: center;"&gt;Welcome To GeeksForGeeks &lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="main"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Home&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Read&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Write&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;About Us&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Contact Us&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Privacy Policy&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+<p><img src="./3_Différence entre CSS Grid et CSS Flexbox_files/Screenshot107.png" width="1359"></p>
+<p><strong><a href="https://fr.acervolima.com/introduction-a-css-flexbox/" rel="noopener" target="_blank">Flexbox</a> :</strong> La CSS Flexbox propose une mise en page unidimensionnelle. Il est utile pour allouer et aligner l’espace entre les éléments d’un conteneur (constitué de grilles). Il fonctionne avec toutes sortes d’appareils d’affichage et de tailles d’écran.</p>
+<p>Pour commencer, vous devez définir un élément conteneur comme une grille avec <strong>display : flex;</strong></p>
+<p><strong>Exemple:</strong></p>
+<div class="blocos-linguagens">
+<div class="bloco-linguagem">
+<h2>HTML</h2>
+<pre class="codigo">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.main{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: flex;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: flex;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid: auto auto / auto auto auto auto;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid-gap: 10px;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: green;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.gfg {&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: rgb(255, 255, 255);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding: 25px 0;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 30px;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 style="text-align: center;"&gt;Welcome To GeeksForGeeks &lt;/h2&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="main"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Home&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Read&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Write&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;About Us&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Contact Us&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="gfg"&gt;Privacy Policy&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+<p><img src="./3_Différence entre CSS Grid et CSS Flexbox_files/Screenshot109.png" width="1358"></p>
+<p><strong>Unicité dans Grid et Flexbox&nbsp;:</strong></p>
+<p><strong>Une contre deux dimensions&nbsp;:</strong></p>
+<ul>
+<li>Grid est conçu pour une mise en page bidimensionnelle tandis que Flexbox en est un. Cela signifie que Flexbox peut fonctionner sur les lignes ou les colonnes à la fois, mais que Grids peut fonctionner sur les deux.</li>
+<li>Flexbox, vous donne plus de flexibilité lorsque vous travaillez sur l’un ou l’autre élément (ligne ou colonne). Le balisage HTML et CSS seront faciles à gérer dans ce type de scénario.</li>
+<li>GRID vous offre plus de flexibilité pour vous déplacer dans les blocs, quel que soit votre balisage HTML.</li>
+</ul>
+<p><strong>Contenu d’abord vs mise en page d’abord&nbsp;:</strong></p>
+<ul>
+<li>L’unicité majeure entre Flexbox et Grids est que le premier fonctionne sur le contenu tandis que le second est basé sur la mise en page.</li>
+<li>La disposition Flexbox est la mieux adaptée aux composants d’application et aux dispositions à petite échelle, tandis que la disposition Grille est conçue pour les dispositions à plus grande échelle qui ne sont pas linéaires dans leur conception.</li>
+</ul>
+<p><strong>Différence entre Grid et Flexbox&nbsp;:</strong></p>
+<p><strong>1. Dimensionnalité et flexibilité&nbsp;:</strong></p>
+<ul>
+<li>Flexbox offre un meilleur contrôle sur l’alignement et la répartition de l’espace entre les éléments. Étant unidimensionnel, Flexbox ne traite que des colonnes ou des lignes.</li>
+<li>Grid a des capacités de mise en page en deux dimensions qui permettent des largeurs flexibles en tant qu’unité de longueur. Cela compense les limites de Flex.</li>
+</ul>
+<p><strong>2. Alignement :</strong></p>
+<ul>
+<li>Flex Direction permet aux développeurs d’aligner les éléments verticalement ou horizontalement, ce qui est utilisé lorsque les développeurs créent et inversent des lignes ou des colonnes.</li>
+<li>CSS Grid déploie des unités de mesure fractionnaires pour la fluidité de la grille et la fonctionnalité de mot-clé automatique pour ajuster automatiquement les colonnes ou les lignes.</li>
+</ul>
+<p><strong>3. Gestion des articles</strong></p>
+<ul>
+<li>Flex Container est l’élément parent tandis que Flex Item représente les enfants. Le Flex Container peut assurer une représentation équilibrée en ajustant les dimensions des éléments. Cela permet aux développeurs de concevoir pour des tailles d’écran fluctuantes.</li>
+<li>Grid prend en charge le placement de contenu implicite et explicite. Son automatisation intégrée lui permet d’étendre automatiquement les éléments de ligne et de copier les valeurs dans la nouvelle création à partir de l’élément précédent.</li>
+</ul>
+<figure class="table">
+<table>
+<tbody>
+<tr>
+<td>
+<p style="text-align:center"><strong>Propriété</strong></p>
+</td>
+<td>
+<p style="text-align:center"><strong>Grille</strong></p>
+</td>
+<td>
+<p style="text-align:center"><strong>Boîte flexible</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align:center">Dimension</p>
+</td>
+<td>
+<p style="text-align:center">Bidimensionnel</p>
+</td>
+<td>
+<p style="text-align:center">Unidimensionnel</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align:center">Fonctionnalités</p>
+</td>
+<td>
+<p style="text-align:center">Peut fléchir la combinaison d’articles grâce à des caractéristiques occupant de l’espace</p>
+</td>
+<td>
+<p style="text-align:center">Peut pousser l’élément de contenu à un alignement extrême</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align:center">Type d’assistance</p>
+</td>
+<td>
+<p style="text-align:center">Mise en page d’abord</p>
+</td>
+<td>
+<p style="text-align:center">Le contenu d’abord</p>
+</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p><strong>Conclusion</strong></p>
+<ul>
+<li>CSS Grids vous aide à créer la mise en page extérieure de la page Web. Vous pouvez créer une conception complexe et réactive avec cela. C’est pourquoi on l’appelle ‘mise en page d’abord’.</li>
+<li>Flexbox aide principalement à aligner le contenu et à déplacer les blocs.</li>
+<li>Les grilles CSS sont destinées aux mises en page 2D. Cela fonctionne avec les lignes et les colonnes.</li>
+<li>Flexbox fonctionne mieux dans une seule dimension (lignes OU colonnes).</li>
+<li>Ce sera plus rapide et utile si vous utilisez les deux en même temps.</li>
+</ul>
+<div class="creditos note">
+<p class="title-creditos">Post automatically translated</p>
+<p>Article written by <a href="https://auth.geeksforgeeks.org/user/portalpirate/articles" target="_blank" rel="noopener">portalpirate</a> and translated by Acervo Lima. The original can be accessed <a href="https://www.geeksforgeeks.org/comparison-between-css-grid-css-flexbox/" target="_blank" rel="noopener">here</a>. Licence: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CCBY-SA</a></p>
+</div>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="cat-links"><span class="fas fa-folder fa-fw" aria-hidden="true"></span><span class="screen-reader-text">Categories</span> <a href="https://fr.acervolima.com/category/css/" rel="category tag">CSS</a> <a href="https://fr.acervolima.com/category/css-properties/" rel="category tag">CSS-Properties</a> <a href="https://fr.acervolima.com/category/picked/" rel="category tag">Picked</a> <a href="https://fr.acervolima.com/category/technical-scripter/" rel="category tag">Technical Scripter</a> <a href="https://fr.acervolima.com/category/technical-scripter-2020/" rel="category tag">Technical Scripter 2020</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+	<nav class="navigation post-navigation" aria-label="Publications">
+		<h2 class="screen-reader-text">Navigation de l’article</h2>
+		<div class="nav-links"><div class="nav-next"><a href="https://fr.acervolima.com/ola-mundo/" rel="next"><span class="nav-subtitle">Next Post<span class="fas fa-angle-double-right" aria-hidden="true"></span></span><span class="nav-title">Olá, mundo!</span></a></div></div>
+	</nav>
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://fr.acervolima.com/difference-entre-css-grid-et-css-flexbox/#respond" style="display:none;">Annuler la réponse</a></small></h2><form action="https://fr.acervolima.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Votre adresse e-mail ne sera pas publiée.</span> <span class="required-field-message" aria-hidden="true">Les champs obligatoires sont indiqués avec <span class="required" aria-hidden="true">*</span></span></p><p class="comment-form-comment"><label for="comment">Commentaire <span class="required" aria-hidden="true">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea></p><p class="comment-form-author"><label for="author">Nom <span class="required" aria-hidden="true">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required=""></p>
+<p class="comment-form-email"><label for="email">E-mail <span class="required" aria-hidden="true">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required=""></p>
+<p class="comment-form-url"><label for="url">Site web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Enregistrer mon nom, mon e-mail et mon site dans le navigateur pour mon prochain commentaire.</label></p>
+<p class="aiowps-captcha"><label for="aiowps-captcha-answer">Saisissez votre réponse en chiffres</label></p><div class="aiowps-captcha-equation"><strong>trois × 4 = <input type="hidden" name="aiowps-captcha-string-info" id="aiowps-captcha-string-info" value="t0eioc667h"><input type="hidden" name="aiowps-captcha-temp-string" id="aiowps-captcha-temp-string" value="1663665129"><input type="text" size="2" id="aiowps-captcha-answer" name="aiowps-captcha-answer" value="" autocomplete="off"></strong></div><p></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Laisser un commentaire"> <input type="hidden" name="comment_post_ID" value="19173" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+	</main><!-- #main -->
+</div><!-- #primary -->
+
+<aside id="secondary" class="widget-area" role="complementary">
+	<div id="block-3" class="widget widget_block"><div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container"><h2>Posts recentes</h2><ul class="wp-block-latest-posts__list wp-block-latest-posts"><li><a class="wp-block-latest-posts__post-title" href="https://fr.acervolima.com/python-transformation-de-fourier-rapide/">Python | Transformation de Fourier rapide – Part 1</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fr.acervolima.com/vues-generiques-basees-sur-les-classes-django-creer-recuperer-mettre-a-jour-supprimer/">Vues génériques basées sur les classes Django (créer, récupérer, mettre à jour, supprimer)</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fr.acervolima.com/pyqt5-comment-supprimer-tous-les-elements-de-combobox/">PyQt5 – Comment supprimer tous les éléments dans ComboBox ?</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fr.acervolima.com/methode-decorator-modeles-de-conception-python/">Méthode de décorateur – Patrons de conception Python</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fr.acervolima.com/python-pandas-timedeltaindex-isna/">Python | Pandas TimedeltaIndex.isna</a></li>
+</ul></div></div></div></aside><!-- #secondary -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+
+		
+		<div class="site-info">
+			
+			
+			© 2022 Acervo Lima, Some rights reserved
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<style>.wp-container-1 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-1 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-1 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<script id="dan-navigation-js-extra">
+var danScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src="./3_Différence entre CSS Grid et CSS Flexbox_files/navigation.js.téléchargement" id="dan-navigation-js"></script>
+<script src="./3_Différence entre CSS Grid et CSS Flexbox_files/skip-link-focus-fix.js.téléchargement" id="dan-skip-link-focus-fix-js"></script>
+<script src="./3_Différence entre CSS Grid et CSS Flexbox_files/comment-reply.min.js.téléchargement" id="comment-reply-js"></script>
+
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./3_Différence entre CSS Grid et CSS Flexbox_files/ads.html" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: block; width: 100% !important; height: 95px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-anchor-status="displayed" data-ad-status="filled" data-anchor-shown="true"><div class="grippy-host"></div><div id="aswift_2_host" style="border: none !important; height: 90px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><iframe id="aswift_2" name="aswift_2" style="width: 728px !important; height: 90px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./3_Différence entre CSS Grid et CSS Flexbox_files/zrt_lookup.html" data-google-container-id="a!3" data-google-query-id="CPf9vJmGo_oCFVqChQodpfwCZA" data-load-complete="true"></iframe></div></ins><iframe src="./3_Différence entre CSS Grid et CSS Flexbox_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./3_Différence entre CSS Grid et CSS Flexbox_files/zrt_lookup(1).html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_1" name="aswift_1" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="./3_Différence entre CSS Grid et CSS Flexbox_files/zrt_lookup(2).html" data-google-container-id="a!2" data-google-query-id="CPb9vJmGo_oCFVqChQodpfwCZA" data-load-complete="true"></iframe></div></ins></html>

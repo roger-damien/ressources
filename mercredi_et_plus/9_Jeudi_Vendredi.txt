@@ -1,0 +1,14 @@
+
+https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1605881-structurez-votre-page
+Avec TP création site
+
+Pour éviter l'inscription au site:
+F12 accès au debugueur de chrome
+onglet appli
+	stockage local
+		openclassroom : faire click droit / effacer
+		Même chose pour les cookies
+	
+et/ou 
+possibilité de demo d'une installation de worpress en local	
+avec prise en main rapide du CMS

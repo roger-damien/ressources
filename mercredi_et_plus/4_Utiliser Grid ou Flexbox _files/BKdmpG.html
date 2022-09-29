@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- saved from url=(0130)file:///C:/DOMI/CDI/Cours/ACTU-Cours/7_HTML_CSS/CoursDomi/CSS/Cours-5/Flexbox/Utiliser%20Grid%20ou%20Flexbox%20__files/BKdmpG.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Grid Named Areas with header and footer</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="qPgpdvAe9Y5Vz8hDt93UpK3KJtNOpVwQvx/o48Ff2vJPkGd+xN9J0kOyiaBh9CrxZf0DhValLqU272PYWL8v/w==">
+<link rel="stylesheet" media="all" href="./embed-c85750d5268bca3e251eb8b9bc40e1afbdc02849a11e0a6710b50b2f54e65c8d.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #76daff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #cccccc;
+      color: #000000;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap a {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="./twilight-1384711dde26dace772d921a7aec83b44bfe4bfda4f990cf1c049737be68ea70.css">
+</head>
+<body id="the-body" style="border: 5px solid #bababa; --borderWidth: 5px;" class="codepen-embed-body static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="https://codepen.io/rachelandrew/embed/BKdmpG?height=450&amp;theme-id=5394&amp;slug-hash=BKdmpG&amp;default-tab=result&amp;user=rachelandrew&amp;embed-version=2&amp;name=cp_embed_1#html-box" aria-pressed="false" role="button">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="https://codepen.io/rachelandrew/embed/BKdmpG?height=450&amp;theme-id=5394&amp;slug-hash=BKdmpG&amp;default-tab=result&amp;user=rachelandrew&amp;embed-version=2&amp;name=cp_embed_1#css-box" aria-pressed="false" role="button">
+CSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="https://codepen.io/rachelandrew/embed/BKdmpG?height=450&amp;theme-id=5394&amp;slug-hash=BKdmpG&amp;default-tab=result&amp;user=rachelandrew&amp;embed-version=2&amp;name=cp_embed_1#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="large-logo edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/rachelandrew/pen/BKdmpG" title="Edit on CodePen">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M80 6h-9v14h9 M114 6h-9 v14h9 M111 13h-6 M77 13h-6 M122 20V6l11 14V6 M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24 M88 14h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14 M15 8c-1.3-1.3-3-2-5-2c-4 0-7 3-7 7s3 7 7 7 c2 0 3.7-0.8 5-2 M64 13c0 4-3 7-7 7h-5V6h5C61 6 64 9 64 13z"></path>
+</svg>
+</a>
+<a class="box-logo edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/rachelandrew/pen/BKdmpG" title="Edit on CodePen">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2L22 9.3V16.7z M44 16.7L33 9.3l-11 7.4 M22 9.3l11 7.3 l11-7.3 M33 2v7.3 M33 16.7V24"></path>
+</svg>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thick" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre><code data-lang="htmlmixed" id="actual-html-code" data-og-lang="htmlmixed" data-alt-lang="xml" class=" cm-s-default cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"wrapper"</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"mainheader"</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>The Dominion of the Air <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>The Story of Aerial Navigation<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Excerpts from the book by J.M. Bacon<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"panel"</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>Chapter listing<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h4</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>The Dawn of Aeronautics<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>The Invention of the Balloon<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>The First Balloon Ascent in England<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>The Development of Balloon Philosophy<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>Some Famous Early Voyagers<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>Charles Green and the Nassau Balloon<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>John Wise - The American Aeronaut<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>The Balloon in the Service of Science<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>Some Noteworthy Ascents<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#"</span><span class="cm-tag cm-bracket">&gt;</span>The Highest Ascent on Record<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"content"</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>The First Balloon Ascent in England<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>Following his own account, Lunardi's first act on finding himself fairly above the town was to fortify himself with some glasses of wine, and to devour the leg of a chicken. He describes the city as a vast beehive, St. Paul's and other churches standing      out prominently; the streets shrunk to lines, and all humanity apparently transfixed and watching him. A little later he is equally struck with the view of the open country, and his ecstasy is pardonable in a novice. The verdant pastures eclipsed      the visions of his own lands. The precision of boundaries impressed him with a sense of law and order, and of good administration in the country where he was a sojourner.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>By this time he found his balloon, which had been only two-thirds full at starting, to be so distended that he was obliged to untie the mouth to release the strain. He also found that the condensed moisture round the neck had frozen. These two statements      point to his having reached a considerable altitude, which is intelligible enough. It is, however, difficult to believe his further assertion that by the use of his single oar he succeeded in working himself down to within a few hundred feet of      the earth. The descent of the balloon must, in point of fact, have been due to a copious outrush of gas at his former altitude. Had his oar really been effective in working the balloon down it would not have needed the discharge of ballast presently      spoken of to cause it to reascend. Anyhow, he found himself sufficiently near the earth to land a passenger who was anxious to get out. His cat had not been comfortable in the cold upper regions, and now at its urgent appeal was deposited in a corn      field, which was the point of first contact with the earth. It was carefully received by a country-woman, who promptly sold it to a gentleman on the other side of the hedge, who had been pursuing the balloon. <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">footer</span> <span class="cm-attribute">class</span>=<span class="cm-string">"mainfooter"</span><span class="cm-tag cm-bracket">&gt;</span>    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>This book is available to read in full on <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://www.gutenberg.org/files/861/861-h/861-h.htm"</span><span class="cm-tag cm-bracket">&gt;</span>the Project Gutenburg website<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">footer</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre><code data-lang="css" id="actual-css-code" data-og-lang="css" data-alt-lang="css" class=" cm-s-default cm-s-default"><span class="cm-qualifier">.mainheader</span> {  <span class="cm-property">grid-area</span>: <span class="cm-variable">header</span>;}<span class="cm-qualifier">.content</span> {  <span class="cm-property">grid-area</span>: <span class="cm-atom">content</span>;}<span class="cm-qualifier">.panel</span> {  <span class="cm-property">grid-area</span>: <span class="cm-variable">sidebar</span>;}<span class="cm-qualifier">.mainfooter</span> {  <span class="cm-property">grid-area</span>: <span class="cm-variable">footer</span>;}<span class="cm-qualifier">.wrapper</span> {  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;  <span class="cm-property">max-width</span>: <span class="cm-number">960px</span>;  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;  <span class="cm-property">grid-gap</span>: <span class="cm-number">20px</span>;  <span class="cm-property">grid-template-areas</span>:     <span class="cm-string">"header"</span>    <span class="cm-string">"content"</span>    <span class="cm-string">"sidebar"</span>    <span class="cm-string">"footer"</span>}<span class="cm-def">@media</span> (<span class="cm-property">min-width</span>: <span class="cm-number">550px</span>) {      <span class="cm-qualifier">.wrapper</span> {    <span class="cm-property">grid-template-columns</span>: <span class="cm-number">30%</span> <span class="cm-number">65%</span>;    <span class="cm-property">grid-template-areas</span>:      <span class="cm-string">"header header"</span>      <span class="cm-string">"sidebar content"</span>      <span class="cm-string">"footer footer"</span>  }}</code></pre>
+</div>
+<div id="result-box" class="code-box active" role="region" aria-label="Result">
+<iframe id="result-iframe" class="result-iframe " sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" tabindex="-1" data-src="https://cdpn.io/rachelandrew/fullembedgrid/BKdmpG?type=embed&amp;animations=stop-after-5" src="./BKdmpG(1).html" allowtransparency="true" frameborder="0" scrolling="yes" allowpaymentrequest="true" allowfullscreen="true" name="CodePen Preview for Grid Named Areas with header and footer" title="CodePen Preview for Grid Named Areas with header and footer">
+      </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/rachelandrew" target="_blank" rel="noopener" class="about-image" style="background-image: url(https://gravatar.com/avatar/c96ed27286a51ae9d0951066c1d75579?s=512&amp;d=https://static.codepen.io/assets/avatars/user-avatar-512x512-6e240cf350d2f1cc07c2bed234c3a3bb5f1b237023c204c782622e80d6b212ba.png)"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/rachelandrew" target="_blank" rel="noopener">rachelandrew</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/rachelandrew" target="_blank" rel="noopener" class="about-user-more">
+See more by @rachelandrew on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css</a>
+</li>
+<li>
+<a href="https://codepen.io/rachelandrew/pen/7e10b01d33826401e0bf8e07ce95ac4b/" target="_blank">https://codepen.io/rachelandrew/pen/7e10b01d33826401e0bf8e07ce95ac4b/</a>
+</li>
+</ol>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button active" id="zoom-button-1">1×</button></li><li><button class="action-button" id="zoom-button-05">0.5×</button></li><li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script>
+    __processedPen = {"html":"&lt;div class=&quot;wrapper&quot;&gt;\n\n  &lt;header class=&quot;mainheader&quot;&gt;\n    &lt;h1&gt;The Dominion of the Air &lt;span&gt;The Story of Aerial Navigation&lt;/span&gt;&lt;/h1&gt;\n    &lt;p&gt;Excerpts from the book by J.M. Bacon&lt;/p&gt;\n  &lt;/header&gt;\n\n\n  &lt;div class=&quot;panel&quot;&gt;\n    &lt;h4&gt;Chapter listing&lt;/h4&gt;\n    &lt;ul&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;The Dawn of Aeronautics&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;The Invention of the Balloon&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;The First Balloon Ascent in England&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;The Development of Balloon Philosophy&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Some Famous Early Voyagers&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Charles Green and the Nassau Balloon&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;John Wise - The American Aeronaut&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;The Balloon in the Service of Science&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Some Noteworthy Ascents&lt;/a&gt;&lt;/li&gt;\n      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;The Highest Ascent on Record&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n\n  &lt;div class=&quot;content&quot;&gt;\n    &lt;h2&gt;The First Balloon Ascent in England&lt;/h2&gt;\n    &lt;p&gt;Following his own account, Lunardi&#39;s first act on finding himself fairly above the town was to fortify himself with some glasses of wine, and to devour the leg of a chicken. He describes the city as a vast beehive, St. Paul&#39;s and other churches standing\n      out prominently; the streets shrunk to lines, and all humanity apparently transfixed and watching him. A little later he is equally struck with the view of the open country, and his ecstasy is pardonable in a novice. The verdant pastures eclipsed\n      the visions of his own lands. The precision of boundaries impressed him with a sense of law and order, and of good administration in the country where he was a sojourner.&lt;/p&gt;\n\n    &lt;p&gt;By this time he found his balloon, which had been only two-thirds full at starting, to be so distended that he was obliged to untie the mouth to release the strain. He also found that the condensed moisture round the neck had frozen. These two statements\n      point to his having reached a considerable altitude, which is intelligible enough. It is, however, difficult to believe his further assertion that by the use of his single oar he succeeded in working himself down to within a few hundred feet of\n      the earth. The descent of the balloon must, in point of fact, have been due to a copious outrush of gas at his former altitude. Had his oar really been effective in working the balloon down it would not have needed the discharge of ballast presently\n      spoken of to cause it to reascend. Anyhow, he found himself sufficiently near the earth to land a passenger who was anxious to get out. His cat had not been comfortable in the cold upper regions, and now at its urgent appeal was deposited in a corn\n      field, which was the point of first contact with the earth. It was carefully received by a country-woman, who promptly sold it to a gentleman on the other side of the hedge, who had been pursuing the balloon. &lt;/p&gt;\n  &lt;/div&gt;\n\n  &lt;footer class=&quot;mainfooter&quot;&gt;\n    &lt;p&gt;This book is available to read in full on &lt;a href=&quot;https://www.gutenberg.org/files/861/861-h/861-h.htm&quot;&gt;the Project Gutenburg website&lt;/a&gt;.&lt;/p&gt;\n  &lt;/footer&gt;\n\n&lt;/div&gt;","css":".mainheader {\n  grid-area: header;\n}\n.content {\n  grid-area: content;\n}\n.panel {\n  grid-area: sidebar;\n}\n.mainfooter {\n  grid-area: footer;\n}\n\n.wrapper {\n  width: 100%;\n  max-width: 960px;\n  margin: 0 auto;\n  display: grid;\n  grid-gap: 20px;\n  grid-template-areas: \n    &quot;header&quot;\n    &quot;content&quot;\n    &quot;sidebar&quot;\n    &quot;footer&quot;\n}\n\n@media (min-width: 550px) {\n  \n  \n  .wrapper {\n    grid-template-columns: 30% 65%;\n    grid-template-areas:\n      &quot;header header&quot;\n      &quot;sidebar content&quot;\n      &quot;footer footer&quot;\n  }\n}","js":""};
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __pageType = "embed";
+    __editable = false;
+    __embed_prefill = false;
+    __env = "production";
+  </script>
+<script src="./embed-166172e79150f4949af75ccd11b36d6ec62a8b742e2d3393478bfa04ce0faee8.js.téléchargé"></script>
+
+
+</body></html>

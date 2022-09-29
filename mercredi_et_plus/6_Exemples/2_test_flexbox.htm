@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+            body {
+              padding: 2em;
+            }
+            .conteneur {
+              display: -webkit-box;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-flex-flow: row wrap;
+              flex-flow: row wrap;
+              font-weight: bold;
+              text-align: center;
+            }
+ 
+            .conteneur > * {
+              padding: 10px;
+              flex: 1 100%;
+            }
+ 
+            .entete {
+              background: #ff6347;
+            }
+ 
+            .pied_de_page {
+              background: #90ee90;
+            }
+ 
+            .main {
+              text-align: left;
+              background: #00bfff;
+            }
+ 
+            .bloc-1 {
+              background: #ffd700;
+            }
+ 
+            .bloc-2 {
+              background: #ff69b4;
+            }
+ 
+            @media all and (min-width: 600px) {
+              .bloc {
+                flex: 1 auto;
+              }
+            }
+            @media all and (min-width: 800px) {
+              .main {
+                flex: 3 0px;
+              }
+ 
+              .bloc-1 {
+                order: 1;
+              }
+ 
+              .main {
+                order: 2;
+              }
+ 
+              .bloc-2 {
+                order: 3;
+              }
+ 
+              .pied_de_page {
+                order: 4;
+              }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+<h3>Exemple</h3> 
+                <div class="conteneur">  
+                    <entete class="entete">FLEXBOX (Chapeau)</entete>
+                    <article class="main">    
+                        <p>Flexbox (pour flexible box) est un mode de mise en page prévoyant une disposition des éléments d’une page de telle sorte que ces éléments possèdent un comportement prévisible lorsqu’ils doivent s’accommoder de différentes tailles d’écrans/appareils. Dans de nombreux cas, le modèle de boîte Flexbox offre une amélioration du modèle block dans lequel les flottements (float) ne sont pas utilisés, pas plus que la fusion des marges du conteneur flex avec ses éléments.</p>    
+                    </article>
+                    
+                    <bloc class="bloc bloc-1">Le responsive</bloc>
+                    <bloc class="bloc bloc-2">C'est pratique !</bloc>
+                    
+                    <pied_de_page class="pied_de_page">Domi cours CSS3 (footer)</pied_de_page>
+                </div>                
+            </div>
+        </div>
+    </body>
+</html>

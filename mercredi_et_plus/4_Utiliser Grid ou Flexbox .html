@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- saved from url=(0117)file:///C:/DOMI/CDI/Cours/ACTU-Cours/7_HTML_CSS/CoursDomi/CSS/Cours-5/Flexbox/Utiliser%20Grid%20ou%20Flexbox%20_.html -->
+<html lang="fr" prefix="dcterms: http://purl.org/dc/terms/"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utiliser Grid ou Flexbox ?</title>
+    <meta name="title" content="Utiliser Grid ou Flexbox ?">
+    <meta name="keywords" content="css, html, web, web design, responsive design, développement web, sass, svg, animations, flexbox, css-grid layout, javascript, typographie, sketch4, grunt, gulp, ux, ui, métadonnées, web sémantique, seo, workflow, video">
+    <meta name="Editor" content="Pierre Choffé">
+    <meta name="Translator" content="Pierre Choffé">
+    <meta name="Publisher" content="La Cascade">
+    <link rel="shortcut icon" href="https://la-cascade.io/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./4_Utiliser Grid ou Flexbox _files/global.css">
+    <link href="./4_Utiliser Grid ou Flexbox _files/css" rel="stylesheet" type="text/css">
+
+    <link rel="publisher" href="https://plus.google.com/u/0/114976289963220170204">
+    <link rel="author" href="https://plus.google.com/u/0/114976289963220170204">
+    <meta name="twitter:creator:id" content="37664207">
+
+
+    <meta property="fb:admins" content="100007472623336">
+    <meta property="og:locale" content="fr">
+
+
+    <meta name="description" content="Rachel Andrew  répond ici à la question de savoir quand et comment utiliser Flexbox ou CSS Grid Layout. Tout dépend de ce que vous voulez...">
+    <link rel="shortcut icon" href="https://la-cascade.io/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://la-cascade.io/utiliser-grid-ou-flexbox/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://la-cascade.io/utiliser-grid-ou-flexbox/amp/">
+    
+    <meta property="og:site_name" content="LA CASCADE">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Utiliser Grid ou Flexbox ?">
+    <meta property="og:description" content="Rachel Andrew  répond ici à la question de savoir quand et comment utiliser Flexbox ou CSS Grid Layout. Tout dépend de ce que vous voulez...">
+    <meta property="og:url" content="https://la-cascade.io/utiliser-grid-ou-flexbox/">
+    <meta property="article:published_time" content="2016-04-18T22:03:55.000Z">
+    <meta property="article:modified_time" content="2018-10-28T15:48:02.000Z">
+    <meta property="article:tag" content="CSS-Grid">
+    <meta property="article:tag" content="Flexbox">
+    <meta property="article:tag" content="CSS">
+    <meta property="article:tag" content="Intermédiaire">
+    <meta property="article:tag" content="Layout">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/LaCascade.io/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Utiliser Grid ou Flexbox ?">
+    <meta name="twitter:description" content="Rachel Andrew  répond ici à la question de savoir quand et comment utiliser Flexbox ou CSS Grid Layout. Tout dépend de ce que vous voulez...">
+    <meta name="twitter:url" content="https://la-cascade.io/utiliser-grid-ou-flexbox/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="pierre choffé">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="CSS-Grid, Flexbox, CSS, Intermédiaire, Layout">
+    <meta name="twitter:site" content="@pierrechoffe">
+    <meta name="twitter:creator" content="@pierrechoffe">
+    
+    <script type="text/javascript" async="" src="./4_Utiliser Grid ou Flexbox _files/analytics.js.téléchargement"></script><script src="./4_Utiliser Grid ou Flexbox _files/show_ads_impl.js.téléchargement" id="google_shimpl"></script><script src="./4_Utiliser Grid ou Flexbox _files/osd.js.téléchargé"></script><script type="text/javascript" async="" src="./4_Utiliser Grid ou Flexbox _files/analytics.js.téléchargé"></script><script src="./4_Utiliser Grid ou Flexbox _files/f.txt" id="google_shimpl"></script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "LA CASCADE",
+        "logo": "https://la-cascade.io/content/images/2015/03/optimised.svg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "pierre choffé",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://la-cascade.io/content/images/2018/09/gravatar_right-compressor.jpeg",
+            "width": 420,
+            "height": 420
+        },
+        "url": "https://la-cascade.io/author/pierre-choffe/",
+        "sameAs": [
+            "https://twitter.com/pierrechoffe"
+        ]
+    },
+    "headline": "Utiliser Grid ou Flexbox ?",
+    "url": "https://la-cascade.io/utiliser-grid-ou-flexbox/",
+    "datePublished": "2016-04-18T22:03:55.000Z",
+    "dateModified": "2018-10-28T15:48:02.000Z",
+    "keywords": "CSS-Grid, Flexbox, CSS, Intermédiaire, Layout",
+    "description": "Rachel Andrew est certainement le plus ardent des promoteurs de CSS Grid Layout.\nElle répond ici à la question de savoir quand et comment utiliser Flexbox ou CSS\nGrid Layout.\n\nPar Rachel Andrew\n\nDans ma récente présentation à Fluent Conf\n[https://rachelandrew.co.uk/archives/2016/03/25/making-sense-of-the-new-css-layout/]\n, j’ai montré les caractéristiques communes et les différences existant entre \nFlexbox [/tag/flexbox/] et CSS Grid Layout [/tag/css-grid/]. Actuellement, nous\nne pouvons utilise",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://la-cascade.io/"
+    }
+}
+    </script>
+
+    
+        <script src="./4_Utiliser Grid ou Flexbox _files/saved_resource"></script>
+        <script defer="" src="./4_Utiliser Grid ou Flexbox _files/members.js.téléchargé"></script>
+    
+    <meta name="generator" content="Ghost 3.1">
+    <link rel="alternate" type="application/rss+xml" title="LA CASCADE" href="https://la-cascade.io/rss/">
+        <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Pierre Choffé",
+      "url" : "https://la-cascade.io/author/pierre-choffe/",
+      "sameAs" : [ "https://www.facebook.com/pierre.choffe.7",
+          "https://twitter.com/pierrechoffe",
+          "https://www.linkedin.com/profile/view?id=108000049",
+          "https://plus.google.com/u/0/+PierreChoff%C3%A9Css/about",
+          "https://la-cascade.io/foaf.rdf",
+          "https://fr.wikipedia.org/wiki/Utilisateur:Pierre_Choffe",
+          "http://codepen.io/pierrechoffe/",
+          "http://tutsplus.com/authors/pierre-choffe",
+          "https://github.com/pierrechoffe"]
+    }
+    </script>
+
+    <meta name="google-site-verification" content="c7Ipq7l4JVE7MtRvcmVlowoe-evYW5-51aHAixnqmLU">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./4_Utiliser Grid ou Flexbox _files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-46638418-1');
+    </script>
+    <script async="" src="./4_Utiliser Grid ou Flexbox _files/analytics.js.téléchargé"></script>
+
+<link rel="preload" href="./4_Utiliser Grid ou Flexbox _files/f(1).txt" as="script"><script type="text/javascript" src="./4_Utiliser Grid ou Flexbox _files/f(1).txt"></script><link rel="preload" href="./4_Utiliser Grid ou Flexbox _files/f(2).txt" as="script"><script type="text/javascript" src="./4_Utiliser Grid ou Flexbox _files/f(2).txt"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><link rel="preload" href="./4_Utiliser Grid ou Flexbox _files/f(3).txt" as="script"><script type="text/javascript" src="./4_Utiliser Grid ou Flexbox _files/f(3).txt"></script><link rel="preload" href="./4_Utiliser Grid ou Flexbox _files/f(4).txt" as="script"><script type="text/javascript" src="./4_Utiliser Grid ou Flexbox _files/f(4).txt"></script></head>
+
+<body class="post-template tag-css-grid tag-flexbox tag-css tag-intermediaire tag-layout nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="https://la-cascade.io/utiliser-grid-ou-flexbox/#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="https://la-cascade.io/">Home</a></li>
+            <li class="nav-liste-articles" role="presentation"><a href="https://la-cascade.io/articles/">Liste Articles</a></li>
+            <li class="nav-liste-ressources" role="presentation"><a href="https://la-cascade.io/ressources/">Liste Ressources</a></li>
+            <li class="nav-a-propos" role="presentation"><a href="https://la-cascade.io/a-propos/">À propos</a></li>
+            <li class="nav-dico-css" role="presentation"><a href="https://la-cascade.io/dico-css/">Dico-CSS</a></li>
+            <li class="nav-css" role="presentation"><a href="https://la-cascade.io/tag/css/">CSS</a></li>
+            <li class="nav-bases-css" role="presentation"><a href="https://la-cascade.io/tag/bases-css/">Bases CSS</a></li>
+            <li class="nav-html" role="presentation"><a href="https://la-cascade.io/tag/html/">HTML</a></li>
+            <li class="nav-svg" role="presentation"><a href="https://la-cascade.io/tag/svg/">SVG</a></li>
+            <li class="nav-sass" role="presentation"><a href="https://la-cascade.io/tag/sass/">Sass</a></li>
+            <li class="nav-flexbox" role="presentation"><a href="https://la-cascade.io/tag/Flexbox/">Flexbox</a></li>
+            <li class="nav-css-grid" role="presentation"><a href="https://la-cascade.io/tag/css-grid/">CSS-Grid</a></li>
+            <li class="nav-design" role="presentation"><a href="https://la-cascade.io/tag/design/">Design</a></li>
+            <li class="nav-responsive-design" role="presentation"><a href="https://la-cascade.io/tag/responsive-web-design/">Responsive Design</a></li>
+            <li class="nav-typographie" role="presentation"><a href="https://la-cascade.io/tag/typographie/">Typographie</a></li>
+            <li class="nav-couleur" role="presentation"><a href="https://la-cascade.io/tag/couleur/">Couleur</a></li>
+            <li class="nav-degrades" role="presentation"><a href="https://la-cascade.io/tag/gradients/">Dégradés</a></li>
+            <li class="nav-animations" role="presentation"><a href="https://la-cascade.io/tag/animations/">Animations</a></li>
+            <li class="nav-workflow" role="presentation"><a href="https://la-cascade.io/tag/workflow/">Workflow</a></li>
+            <li class="nav-sketch" role="presentation"><a href="https://la-cascade.io/tag/sketch/">Sketch</a></li>
+            <li class="nav-semantique" role="presentation"><a href="https://la-cascade.io/tag/metadata/">Sémantique</a></li>
+            <li class="nav-grunt" role="presentation"><a href="https://la-cascade.io/grunt-pour-ceux-qui-pensent-que-grunt-est-complique/">Grunt</a></li>
+            <li class="nav-gulp" role="presentation"><a href="https://la-cascade.io/gulp-pour-les-debutants/">Gulp</a></li>
+            <li class="nav-freefonts" role="presentation"><a href="https://la-cascade.io/les-free-fonts-aujourdhui/">Freefonts</a></li>
+            <li class="nav-video-background" role="presentation"><a href="https://la-cascade.io/video-en-background/">Video Background</a></li>
+    </ul>
+    <div class="follow-me-icons">
+        <a href="https://twitter.com/pierrechoffe"><span class="icon-twitter"></span></a>
+        <a href="https://www.facebook.com/pierre.choffe.7"><span class="icon-facebook"></span></a>
+        <a href="https://plus.google.com/u/0/+PierreChoff%C3%A9Css/posts"><span class="icon-google-plus"></span></a>
+        <a href="http://feeds.feedburner.com/LaCascade"><span class="icon-feed"></span></a>
+    </div>
+    <!-- <a class="subscribe-button icon-feed" href="https://la-cascade.io/rss/">Subscribe</a> -->
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper" itemscope="" itemtype="http://schema.org/Article"><span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><link itemprop="url" href="https://la-cascade.io/"><span itemprop="name" content="La Cascade"><span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><link itemprop="url" href="./4_Utiliser Grid ou Flexbox _files/optimised.svg"></span></span></span>
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="blog-logo" href="https://la-cascade.io/"><img src="./4_Utiliser Grid ou Flexbox _files/optimised.svg" alt="Blog Logo"></a>
+            <a class="menu-button" href="https://la-cascade.io/utiliser-grid-ou-flexbox/#"><span class="burger" aria-label="navigation du site">☰</span><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content">
+    <article class="post tag-css-grid tag-flexbox tag-css tag-intermediaire tag-layout no-image">
+
+        <header class="post-header">
+            <h1 class="post-title" itemprop="headline">Utiliser Grid ou Flexbox ?</h1>
+            <div class="post-meta">
+                <time class="post-date" datetime="2016-04-19" itemprop="datePublished">19 avril 2016</time> <span itemprop="about" aria-label="sujet des articles"> on <a href="https://la-cascade.io/tag/css-grid/">CSS-Grid</a>, <a href="https://la-cascade.io/tag/flexbox/">Flexbox</a>, <a href="https://la-cascade.io/tag/css/">CSS</a>, <a href="https://la-cascade.io/tag/intermediaire/">Intermédiaire</a>, <a href="https://la-cascade.io/tag/layout/">Layout</a></span>
+            </div>
+        </header>
+
+        <section class="post-content" itemprop="articleBody">
+            <!--kg-card-begin: markdown--><div class="post-description"><p><span itemprop="description">Rachel Andrew est certainement le plus ardent des promoteurs de CSS Grid Layout. Elle répond ici à la question de savoir quand et comment utiliser Flexbox ou CSS Grid Layout.</span></p></div>
+<p><em>Par <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Rachel Andrew</span></span></em></p>
+<p>Dans ma récente <a href="https://rachelandrew.co.uk/archives/2016/03/25/making-sense-of-the-new-css-layout/">présentation à Fluent Conf</a>, j’ai montré les caractéristiques communes et les différences existant entre <a href="https://la-cascade.io/tag/flexbox/">Flexbox</a> et <a href="https://la-cascade.io/tag/css-grid/">CSS Grid Layout</a>. Actuellement, nous ne pouvons utiliser <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing"><link itemprop="url" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade"><span itemprop="name">CSS</span></span> <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing"><link itemprop="url" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"><span itemprop="name">Grid Layout</span></span> qu’en activant <a href="http://igalia.github.io/css-grid-layout/enable.html">les fonctionnalités expérimentales des navigateurs</a>, cependant lorsque Grid sera supporté, on pourra parfois s’interroger pour savoir lequel utiliser, de Grid ou de <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing"><link itemprop="url" href="https://en.wikipedia.org/wiki/CSS_Flex_Box_Layout"><span itemprop="name">Flexbox</span></span>. Grid Layout vs Flexbox, voici quelques réflexions sur le sujet.</p>
+<h2 class="softTitleBlue">Layout principal vs éléments d’interface utilisateur</h2>
+<p>Quand on découvre CSS Grid Layout, on pense en général qu’il permet de contrôler les grandes division d’une mise en page et fournit un cadre pour les headers, sidebars, contenu principal et footers.</p>
+<div class="cp_embed_wrapper"><iframe name="cp_embed_1" src="./4_Utiliser Grid ou Flexbox _files/BKdmpG.html" scrolling="no" frameborder="0" height="450" allowtransparency="true" allowfullscreen="true" allowpaymentrequest="true" title="CodePen Embed" class="cp_embed_iframe " style="width: 100%; overflow:hidden; display:block;" id="cp_embed_BKdmpG"></iframe></div>
+<script async="" src="./4_Utiliser Grid ou Flexbox _files/ei.js.téléchargé"></script>
+<p>Vous pouvez en voir un cas d’usage dans cet exemple. Seul l’enfant direct devient un item grid et donc en déclarant une <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing"><link itemprop="url" href="https://en.wikipedia.org/wiki/Grid_(graphic_design)"><span itemprop="name">grille</span></span> (<em>grid</em>) sur mon conteneur, le header, le side bar, le contenu principal et le footer deviennent tous les items grid que nous pouvons placer sur la grille. Tout élément situé à l’intérieur de ces conteneurs principaux peut ensuite être disposé en utilisant n’importe quelle méthode.</p>
+<p>Flexbox n’est pas aussi bien adapté à la création de tels <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing"><link itemprop="url" href="https://en.wikipedia.org/wiki/Page_layout"><span itemprop="name">layout</span></span>. Il est certainement possible de créer une mise en page simple avec Flexbox comme celle que nous venons de voir. Cependant une fois que le <em>wrap</em> (retour à la ligne) entre en action, chaque rangée (ou chaque colonne si l’on travaille avec <a href="https://la-cascade.io/flex-direction/">flex-direction: column</a>) devient un container flex lui-même. La distribution de l’espace se fait le long de cette rangée ou de cette colonne et vous perdez la possibilité d’aligner les objets avec les items des rangées supérieures.</p>
+<p>Nous voyons ici la principale différence entre Flexbox et Grid. Flexbox est conçu fondamentalement pour disposer des items dans une dimension unique —&nbsp;sur une rangée OU sur une colonne. Grid est conçu pour disposer des items dans deux dimensions —&nbsp;rangées ET colonnes.</p>
+<h2 class="softTitleBlue">Uni-dimensionnel vs bi-dimensionnel</h2>
+<p>Voici l’exemple le plus simple possible de layouts à une et deux dimensions (cliquez sur “Edit on CodePen” pour une version pleine largeur)</p>
+<div class="cp_embed_wrapper"><iframe name="cp_embed_2" src="./4_Utiliser Grid ou Flexbox _files/YqqdXL.html" scrolling="no" frameborder="0" height="860" allowtransparency="true" allowfullscreen="true" allowpaymentrequest="true" title="CodePen Embed" class="cp_embed_iframe " style="width: 100%; overflow:hidden; display:block;" id="cp_embed_YqqdXL"></iframe></div>
+<script async="" src="./4_Utiliser Grid ou Flexbox _files/ei.js.téléchargé"></script>
+<p>Dans la mise en page du haut, j’utilise Flexbox pour afficher un ensemble de “cartes”. La <a href="https://la-cascade.io/flexbox-guide-complet/#flexwrap">propriété flex-wrap</a> du container est réglée sur “wrap” (pas de débordement) et donc les items flex se trouvent sur deux lignes. J’ai par ailleurs réglé <a href="https://la-cascade.io/flex-grow/">flex-grow</a> sur 1, <a href="https://la-cascade.io/flex-shrink/">flex-shrink</a> sur 1 et <a href="https://la-cascade.io/flex-basis/">flex-basis</a> sur 200px. Donc ma largeur de boîte idéale est de 200px, mais les items peuvent s’agrandir ou se rétrécir.</p>
+<p>Si mon écran est étroit et n’affiche que trois boîtes sur la première rangée, les deux autres passent en-dessous. Comme flex-grow est réglé sur 1, cela signifie que l’espace résiduel après que la valeur de flex-basis a été retirée est partagé à égalité entre ces boîtes (<span aria-hidden="true" data-icon="☞"></span>&nbsp;<em>NdT&nbsp;: si flex-basis vous donne des maux de tête, consultez l’article <a href="https://la-cascade.io/layout-sur-12-colonnes-avec-flexbox/">Layout sur 12 colonnes</a></em>). La première rangée compte trois boîtes qui sont moins larges que les boîtes de la deuxième rangée qui ne compte que deux boîtes.</p>
+<p>Flexbox fonctionne comme ça. Cependant, la plupart des problèmes liés à Flexbox que l’on me soumet sont dus au fait que les développeurs essaient de l’utiliser pour des layouts en deux dimensions. C’est ici que vous auriez besoin de Grid layout.</p>
+<p>Dans la version Grid, nous définissons la grille sur l’élément conteneur, les items grid se placent juste sur les cellules déjà définies. Donc un item peut s’aligner avec un autre sur sa rangée mais aussi avec un autre sur sa colonne.Si nous voulons qu’un item s’étende sur deux colonnes ou deux rangées, nous ciblons cet item d’une façon ou d’une autre.</p>
+<div class="adsense-page"><p style="position:relative;top:20px;margin:0;"><em>(publicité)</em></p><script async="" src="./4_Utiliser Grid ou Flexbox _files/f(5).txt"></script><!-- Grand Rectangle --><ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6231901620347557" data-ad-slot="6601693420" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:336px;height:280px;" src="./4_Utiliser Grid ou Flexbox _files/saved_resource.html"></iframe></ins></ins></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<hr>
+<h2 class="softTitleBlue">Travailler à partir du contenu vs travailler depuis la définition de la grille</h2>
+<p>Ce que nous pouvons constater dans les exemples qui précèdent c’est que lorsque nous utilisons Grid Layout, nous déclarons notre grille et le contenu de tout grid item doit ensuite s’adapter à l’espace dans lequel il est placé.</p>
+<p>Si vous avez beaucoup d’items, et si vous n’avez pas besoin de les aligner avec d’autres éléments, bref si vous voulez juste qu’ils soient affichés de manière égale et flexible, alors c’est Flexbox qu’il vous faut. Le plus basique des exemples montre le comportement des items lorsqu’ils ont une quantité égale d’espace autour d’eux via la propriété justify-content: space-between.</p>
+<div class="cp_embed_wrapper"><iframe name="cp_embed_3" src="./4_Utiliser Grid ou Flexbox _files/xVjvmb.html" scrolling="no" frameborder="0" height="300" allowtransparency="true" allowfullscreen="true" allowpaymentrequest="true" title="CodePen Embed" class="cp_embed_iframe " style="width: 100%; overflow:hidden; display:block;" id="cp_embed_xVjvmb"></iframe></div>
+<script async="" src="./4_Utiliser Grid ou Flexbox _files/ei.js.téléchargé"></script>
+<p>CSS Grid implémente la distribution de l’espace et les propriétés d’alignement qui font partie du <a href="https://www.w3.org/TR/css-align-3/">module Box Alignment</a>, ce qui donne des possibilités de jouer avec l’alignement et l’espacement des items grid jusqu’à un certain point, mais le fait est qu’en raison de l’approche bi-dimensionnelle de Grid, on ne peut pas faire en sorte qu’une rangée de la grille se comporte différemment de la rangée du dessus. Si vous le voulez, il vous faudra modifier les propriétés des items grid individuels, par exemple en les faisant s’étendre sur plus de cellules ou en utilisant des valeurs différentes d’alignement.</p>
+<p>Bref, c’est à vous de choisir. Est-ce que vous voulez laisser à votre contenu le soin de contrôler la façon dont il est affiché, rangée par rangée ou colonne par colonne&nbsp;? C’est Flexbox.</p>
+<p>Sinon, voulez-vous définir une grille et permettre aux items de se placer automatiquement dans les cellules définies par cette grille, ou bien contrôler leur positionnement en utilisant les lignes ou les zones de template&nbsp;? C’est Grid.</p>
+<p>Si vous voulez voir de nombreux exemples de grilles, jetez un coup d’oeil à ma collection sur <a href="http://gridbyexample.com/examples/">Grid by Example</a>.</p>
+<div class="adsense-page"><p style="position:relative;top:20px;margin:0;"><em>(publicité)</em></p><script async="" src="./4_Utiliser Grid ou Flexbox _files/f(5).txt"></script><!-- Grand Rectangle --><ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6231901620347557" data-ad-slot="6601693420" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0px;width:336px;height:280px;" src="./4_Utiliser Grid ou Flexbox _files/saved_resource(1).html"></iframe></ins></ins></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<hr>
+<p><span class="interesse"><strong>Intéressé par CSS ?</strong> Retrouvez une liste des meilleurs <strong><a href="https://la-cascade.io/articles/#css">articles</a></strong> et <strong><a href="https://la-cascade.io/ressources/#css">ressources</a></strong> du web</span>.</p>
+<p><span class="toutlire"><span aria-hidden="true" data-icon="☞"> </span><strong><a href="https://la-cascade.io/tag/css/">Tous les articles sur CSS</a></strong> parus dans la Cascade</span>.</p>
+<p><span class="toutlire"><span aria-hidden="true" data-icon="☞"> </span><strong><a href="https://la-cascade.io/tag/css-grid/">Tous les articles sur CSS-Grid</a></strong> parus dans la Cascade</span>.</p>
+<p><span class="toutlire"><span aria-hidden="true" data-icon="☞"> </span><strong><a href="https://la-cascade.io/tag/flexbox/">Tous les articles sur Flexbox</a></strong> parus dans la Cascade</span>.</p>
+<p><span class="toutlire"><span aria-hidden="true" data-icon="☞"> </span><strong><a href="https://la-cascade.io/ressources/#outils-cssgrid">Les meilleurs outils CSS Grid</a></strong>  recensés par la Cascade</span>.</p>
+<p><span class="toutlire"><span aria-hidden="true" data-icon="☞"> </span><strong><a href="https://la-cascade.io/ressources/#outils-flexbox">Les meilleurs outils Flexbox</a></strong>  recensés par la Cascade</span>.</p>
+<p><span class="ressourcesComplementaires"><strong>Articles sur les mêmes thèmes</strong> dans la Cascade</span> :</p>
+<p><a href="https://la-cascade.io/css-grid-layout-guide-complet/">CSS Grid Layout, guide complet</a>, par Chris House<br>
+<a href="https://la-cascade.io/css-grid-et-le-saint-graal/">CSS Grid et le Saint Graal</a>, par Ire Aderinokun</p>
+<hr>
+<p><span class="ressourcesComplementaires"><strong>Ressources complémentaires</strong></span></p>
+<p><a href="http://gridbyexample.com/examples/">Grid by Example</a>, de Rachel Andrew, comme son nom l’indique c’est une page proposant de nombreux exemples de mises en page avec Grid Layout. Les exemples utilisent CodePen donc on a toutes les infos à disposition.	<br>
+<a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout">Les ressources MDN</a>, par Rachel Andrew, traduit en français.</p>
+<div class="adsense-page"><script async="" src="./4_Utiliser Grid ou Flexbox _files/f(5).txt"></script><!-- Grand Rectangle --><ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-6231901620347557" data-ad-slot="6601693420" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0px;width:336px;height:280px;" src="./4_Utiliser Grid ou Flexbox _files/saved_resource(2).html"></iframe></ins></ins></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<hr>
+<div itemprop="translationOfWork" itemscope="" itemtype="http://schema.org/CreativeWork"><strong><span class="toutlire"><a itemprop="url" href="https://rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/">Article</a> original paru le <meta itemprop="datePublished" content="2016-03-30">30 mars 2016 dans <a itemprop="sourceOrganization" href="https://rachelandrew.co.uk/">le site Rachel Andrew</a></span></strong><br>
+<em>Traduit avec l’aimable autorisation de l’auteur.<br>
+Copyright <span itemprop="copyrightHolder" content="https://plus.google.com/u/0/+RachelAndrew/about">Rachel Andrew</span> © <span itemprop="copyrightYear">2016</span></em>. 
+<p><span class="interesse"><strong>Sur l’auteur</strong></span> : <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a itemprop="url" href="https://plus.google.com/u/0/+RachelAndrew/about" class="authorLink">Rachel Andrew</a></span></span> est la fondatrice et la directrice de la société de développement web <a href="http://www.edgeofmyseat.com/">edgeofmyseat.com</a>. La société se concentre actuellement sur son CMS <a href="https://grabaperch.com/">Perch</a>. Elle donne de nombreuses conférences, dont on peut trouver la liste et les ressources associées sur <a href="https://rachelandrew.co.uk/presentations">cette page</a>. Elle est également l’auteur de plusieurs <a href="https://rachelandrew.co.uk/books">ouvrages</a> et <a href="https://rachelandrew.co.uk/writing">articles</a>, elle a notamment publié dernièrement <a href="https://abookapart.com/products/get-ready-for-css-grid-layout">Get Ready for CSS Grid Layout</a> chez A Book Apart et co-écrit avec Jeremy Keith la nouvelle version de HTML5 for Web Designers chez le même éditeur. On peut la suivre sur <a href="https://rachelandrew.co.uk/">son site</a>, sur <a href="https://twitter.com/rachelandrew">Twitter</a> et sur <a href="https://plus.google.com/u/0/+RachelAndrew/posts">Google+</a> et lire sa newsletter hebdomadaire <a href="http://csslayout.news/">csslayout.news</a> très intéressante.</p><span itemprop="translator" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="Pierre Choffé"><link itemprop="url" href="https://plus.google.com/u/0/+PierreChoff%C3%A9Css"></span></div><!--kg-card-end: markdown-->
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image" role="group">
+                <a class="img" href="https://la-cascade.io/author/pierre-choffe/" style="background-image: url(/content/images/2018/09/gravatar_right-compressor.jpeg)"><span class="hidden">pierre choffé's Picture</span></a>
+            </figure>
+
+            <div class="author">
+                <h4 itemprop="translator" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a itemprop="url" href="https://la-cascade.io/author/pierre-choffe/">pierre choffé</a></span></h4>
+
+                    <p>Manager d’ensembles musicaux, Traducteur, en route vers la Planète SemanticWeb à bord du vaisseau FRBRoo, pour la description, le partage et l'enrichissement des données musicales.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location" itemprop="locationCreated" itemscope="" itemtype="http://schema.org/Place"><span itemprop="name">Paris, France</span></span>
+                    
+                </div>
+            </div>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/share?text=Utiliser%20Grid%20ou%20Flexbox%20%3F&amp;url=https://la-cascade.io/utiliser-grid-ou-flexbox/" onclick="window.open(this.href, &#39;twitter-share&#39;, &#39;width=550,height=235&#39;);return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://la-cascade.io/utiliser-grid-ou-flexbox/" onclick="window.open(this.href, &#39;facebook-share&#39;,&#39;width=580,height=296&#39;);return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https://la-cascade.io/utiliser-grid-ou-flexbox/" onclick="window.open(this.href, &#39;google-plus-share&#39;, &#39;width=490,height=530&#39;);return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story no-cover" href="https://la-cascade.io/css-initial-inherit-unset-et-revert/">
+        <section class="post">
+            <h2>CSS Initial, Inherit, Unset et Revert</h2>
+            <p>Il existe quatre valeurs applicables (en théorie) à n'importe quelle propriété CSS, ce sont les valeurs explicites par défaut.…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="https://la-cascade.io/css-grid-layout-guide-complet/">
+        <section class="post">
+            <h2>CSS Grid Layout, guide complet</h2>
+            <p>Avec Flexbox, le module CSS Grid Layout représente l'avenir de la mise page CSS. Chris House a conçu un…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <div class="copyright"><span itemprop="copyrightHolder" itemscope="" itemtype="https://schema.org/Organization"><span itemprop="name"><a itemprop="url" href="https://la-cascade.io/">LA CASCADE</a></span></span> Traductions <span itemprop="license" itemscope="" itemtype="https://schema.org/CreativeWork"><a itemprop="url" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><span itemprop="name">CC BY-NC-SA 4.0</span></a></span></div>
+            <div class="poweredby">Proudly published with <a href="https://ghost.org/">Ghost</a></div>
+        </footer>
+
+    </div>
+
+    <!-- You can safely delete this line if your theme does not require jQuery -->
+<script src="./4_Utiliser Grid ou Flexbox _files/jquery-1.11.3.min.js.téléchargé"></script>
+
+    <script>(function(d){d.fn.fitVids=function(e){var c={customSelector:null};if(!document.getElementById("fit-vids-style")){var g=document.head||document.getElementsByTagName("head")[0],f=document.createElement("div");f.innerHTML='<p>x</p><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>';g.appendChild(f.childNodes[1])}e&&
+d.extend(c,e);return this.each(function(){var b="iframe[src*='player.vimeo.com'] iframe[src*='youtube.com'] iframe[src*='youtube-nocookie.com'] iframe[src*='kickstarter.com'][src*='video.html'] object embed".split(" ");c.customSelector&&b.push(c.customSelector);b=d(this).find(b.join(","));b=b.not("object object");b.each(function(){var a=d(this);if(!("embed"===this.tagName.toLowerCase()&&a.parent("object").length||a.parent(".fluid-width-video-wrapper").length)){var b="object"===this.tagName.toLowerCase()||
+a.attr("height")&&!isNaN(parseInt(a.attr("height"),10))?parseInt(a.attr("height"),10):a.height(),c=isNaN(parseInt(a.attr("width"),10))?a.width():parseInt(a.attr("width"),10),b=b/c;a.attr("id")||(c="fitvid"+Math.floor(999999*Math.random()),a.attr("id",c));a.wrap('<div class="fluid-width-video-wrapper"></div>').parent(".fluid-width-video-wrapper").css("padding-top",100*b+"%");a.removeAttr("height").removeAttr("width")}})})}})(window.jQuery||window.Zepto);</script>
+
+    <script>(function(a,h){a(document).ready(function(){a(".post-content").fitVids();a(".scroll-down").arctic_scroll();a(".menu-button, .nav-cover, .nav-close").on("click",function(f){f.preventDefault();a("body").toggleClass("nav-opened nav-closed")})});a.fn.arctic_scroll=function(f){var g={elem:a(this),speed:500},e=a.extend(g,f);e.elem.click(function(d){d.preventDefault();var b=a(this);d=a("html, body");var c=b.attr("data-offset")?b.attr("data-offset"):!1,b=b.attr("data-position")?b.attr("data-position"):!1;
+c?(c=parseInt(c),d.stop(!0,!1).animate({scrollTop:a(this.hash).offset().top+c},e.speed)):b?(c=parseInt(b),d.stop(!0,!1).animate({scrollTop:c},e.speed)):d.stop(!0,!1).animate({scrollTop:a(this.hash).offset().top},e.speed)})}})(jQuery);</script>
+
+
+
+<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0" allowpaymentrequest="true" src="./4_Utiliser Grid ou Flexbox _files/outer.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./4_Utiliser Grid ou Flexbox _files/saved_resource(3).html"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_6680625197188" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./4_Utiliser Grid ou Flexbox _files/saved_resource(4).html"></iframe><iframe id="google_esf" name="google_esf" src="./4_Utiliser Grid ou Flexbox _files/zrt_lookup.html" data-ad-client="ca-pub-6231901620347557" style="display: none;"></iframe><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0" allowpaymentrequest="true" src="./4_Utiliser Grid ou Flexbox _files/outer(1).html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><iframe id="google_osd_static_frame_5515972182082" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./4_Utiliser Grid ou Flexbox _files/saved_resource(5).html"></iframe></body></html>

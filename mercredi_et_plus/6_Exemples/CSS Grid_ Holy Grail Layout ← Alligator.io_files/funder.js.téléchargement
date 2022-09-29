@@ -1,0 +1,89 @@
+(function() {
+  function embed () {
+    var evt = new Event('codefund');
+    var uplift = {};
+
+    function trackUplift() {
+      try {
+        var url = 'https://codefund.io/impressions/c64e311e-1d58-4d7f-9225-0d9a267514ce/uplift?advertiser_id=185';
+        console.log('CodeFund is recording uplift. ' + url);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        xhr.send();
+      } catch (e) {
+        console.log('CodeFund was unable to record uplift! ' + e.message);
+      }
+    };
+
+    function verifyUplift() {
+      if (uplift.pixel1 === undefined || uplift.pixel2 === undefined) { return; }
+      if (uplift.pixel1 && !uplift.pixel2) { trackUplift(); }
+    }
+
+    function detectUplift(count) {
+      var url = 'https://cdn2.codefund.app/assets/px.js';
+      if (url.length === 0) { return; }
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            if (count === 1) { detectUplift(2); }
+            uplift['pixel' + count] = true;
+          } else {
+            uplift['pixel' + count] = false;
+          }
+          verifyUplift();
+        }
+      };
+      xhr.open('GET', url + '?ch=' + count + '&rnd=' + Math.random() * 11);
+      xhr.send();
+    }
+
+    function elementVisible(element) {
+      if (!element) { return false; }
+
+      while (element) {
+        var style = getComputedStyle(element);
+        if (style.visibility === 'hidden' || style.display === 'none') { return false; }
+        element = element.parentElement;
+      }
+
+      return true;
+    }
+
+    function closeCodeFund() {
+      var codeFundElement = document.getElementById('codefund') || document.getElementById('codefund_ad');
+      codeFundElement.remove();
+      sessionStorage.setItem('codefund', 'closed');
+    }
+
+    try {
+      if (sessionStorage.getItem('codefund') === 'closed') { return; }
+
+      var codeFundElement = document.getElementById('codefund') || document.getElementById('codefund_ad');
+      if (!elementVisible(codeFundElement)) {
+        console.log('CodeFund element not visible! Please verify an element exists with id="codefund" and that it is visible.');
+        return;
+      }
+
+      codeFundElement.innerHTML = '<div id="cf"> <span> <span class="cf-wrapper"> <a data-href="campaign_url" target="_blank" rel="sponsored noopener"> <span class="cf-img-wrapper"> <img border="0" height="100" width="130" class="cf-img" alt="Advertise Here" src="https://cdn2.codefund.app/Ysqgpoar4zZH7Ap1XkkhmKaY"> </span> <span class="cf-text"> <strong>Want to reach our audience?</strong> <span>Learn more about placing ethical ads on this site.</span> </span> </a> <a href="https://app.codefund.io" data-target="powered_by_url" class="cf-powered-by" target="_blank" rel="sponsored noopener"> <em>ethical</em> ad by CodeFund <img data-src="impression_url" alt=""> </a> </span> </span> </div>';
+      codeFundElement.querySelector('img[data-src="impression_url"]').src = 'https://codefund.io/display/c64e311e-1d58-4d7f-9225-0d9a267514ce.gif';
+      codeFundElement.querySelectorAll('a[data-href="campaign_url"]').forEach(function (a) { a.href = 'https://codefund.io/impressions/c64e311e-1d58-4d7f-9225-0d9a267514ce/click?campaign_id=395&creative_id=362&property_id=185&template=default&theme=unstyled'; });
+
+      var poweredByElement = codeFundElement.querySelector('a[data-target="powered_by_url"]');
+      if (poweredByElement) { poweredByElement.href = 'https://codefund.io/invite/RA29N30W6tk'; }
+
+      var closeElement = codeFundElement.querySelector('button[data-behavior="close"]');
+      if (closeElement) { closeElement.addEventListener('click', closeCodeFund); }
+
+      evt.detail = { status: 'ok', house: true };
+      detectUplift(1);
+    } catch (e) {
+      console.log('CodeFund detected an error! Please verify an element exists with id="codefund". ' + e.message);
+      evt.detail = { status: 'error', message: e.message };
+    }
+    document.removeEventListener('DOMContentLoaded', embed);
+    window.dispatchEvent(evt);
+  };
+  (document.readyState === 'loading') ? document.addEventListener('DOMContentLoaded', embed) : embed();
+})();

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://s0.2mdn.net/8364841/1574690685273/index.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>T4 ODR boite sosh Noel</title><link rel="stylesheet" href="./styles.min.css"><meta name="ad.size" content="width=300,height=250"><script type="text/javascript">var clickTag = "http://www.google.com";</script><script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head><body><div id="wrapper"><div id="ecrans" class="ecran"><div id="ecran0" class="ecran ecran0" style="opacity: 1; background-color: rgb(222, 37, 84);"><div id="container" class="container" style="opacity: 1;"></div></div><img src="./pup2.png" id="pup2" class="pup2" alt="josh" width="300" height="250" style="transform: matrix(0.6, 0, 0, 0.6, -90, 25);"><div id="ecran1" class="ecran ecran1" style="opacity: 0;"><img src="./fall-livebox.png" id="falllivebox" class="" alt="livebox sosh" width="300" height="650" style="transform: translate3d(0px, -159.943px, 0px);"></div><div id="ecran2" class="ecran ecran2" style="opacity: 1; background-color: rgb(38, 130, 142);"><img src="./fall-boite.png" id="fallboite" class="" alt="boite sosh" width="300" height="650" style="transform: translate3d(0px, -802.8px, 0px);"></div><div id="ecran3" class="ecran ecran3" style="opacity: 0;"><div id="fond" class="fond" style="transform: matrix(1.5, 0, 0, 1, 0, 0);"></div><img src="./titre01.png" id="titre01" alt="Internet à la maison" width="300" height="250" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 30);"> <img src="./boite.png" id="boite" class="boite" alt="boite sosh" width="300" height="250" style="transform: matrix(0, 0, 0, 0, 0, 0);"> <img src="./livebox.png" id="livebox" class="livebox" alt="boite sosh" width="300" height="250" style="transform: matrix(0, 0, 0, 0, 0, 0);"></div><div id="cadre" class="cadre" style="opacity: 1; transform: matrix(1, 0, 0, 1, -141, 0);"><img src="./cadre1.png" id="cadre01" alt="Internet à la maison" width="129" height="126"> <img src="./cadre2.png" id="cadre02" class="frame2" alt="à partir de 14,99€/mois pendant 1 ans puis 19,99€ par mois" width="129" height="126" style="opacity: 1;"> <svg id="guirlande" class="guirlande" xmlns="http://www.w3.org/2500/svg" width="282.2" height="177" viewBox="0 0 282.2 177"><defs><style>.cls-1{fill:none;}.cls-2{fill:#fbcc00;}.cls-2,.cls-3{fill-rule:evenodd;}.cls-3{fill:#fff;}</style></defs><title>guirlande</title><rect id="format" class="cls-1" width="282" height="177"></rect><g id="blanc"><path class="cls-2" d="M135.662,39.638a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,135.662,39.638Zm19.181-1.41a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,154.843,38.228Zm95.9-7.05a3.4,3.4,0,1,1-3.142,3.64A3.4,3.4,0,0,1,250.747,31.177Zm19.181-1.41a3.4,3.4,0,1,1-3.142,3.64A3.4,3.4,0,0,1,269.928,29.767Zm-95.9,7.05a3.4,3.4,0,1,1-3.142,3.64A3.4,3.4,0,0,1,174.024,36.818Zm19.18-1.41a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,193.2,35.408ZM212.385,34a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,212.385,34Zm19.181-1.41a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,231.566,32.587Zm-86.233,138.6a3.4,3.4,0,1,1-3.141,3.639A3.4,3.4,0,0,1,145.333,171.191Zm19.181-1.41a3.4,3.4,0,1,1-3.142,3.639A3.4,3.4,0,0,1,164.514,169.781Zm95.9-7.051a3.4,3.4,0,1,1-3.142,3.64A3.4,3.4,0,0,1,260.418,162.73Zm19.18-1.41a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,279.6,161.32Zm-95.9,7.051a3.4,3.4,0,1,1-3.142,3.639A3.4,3.4,0,0,1,183.7,168.371Zm19.18-1.41a3.4,3.4,0,1,1-3.141,3.639A3.4,3.4,0,0,1,202.875,166.961Zm19.181-1.41a3.4,3.4,0,1,1-3.141,3.639A3.4,3.4,0,0,1,222.056,165.551Zm19.181-1.411a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,241.237,164.14ZM140.686,61.607a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,140.686,61.607Zm6.9,93.9a3.4,3.4,0,1,1-3.638-3.108A3.383,3.383,0,0,1,147.589,155.5Zm-5.521-75.1A3.4,3.4,0,1,1,138.43,77.3,3.383,3.383,0,0,1,142.068,80.4Zm1.378,18.754a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,143.446,99.157Zm1.382,18.8a3.4,3.4,0,1,1-3.637-3.107A3.383,3.383,0,0,1,144.828,117.953Zm1.379,18.755a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,146.207,136.708ZM274.951,51.737a3.4,3.4,0,1,1-3.637-3.108A3.382,3.382,0,0,1,274.951,51.737Zm6.9,93.9a3.4,3.4,0,1,1-3.637-3.107A3.383,3.383,0,0,1,281.854,145.633Zm-5.521-75.1a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,276.333,70.533Zm1.379,18.754a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,277.712,89.287Zm1.382,18.8a3.4,3.4,0,1,1-3.638-3.108A3.385,3.385,0,0,1,279.094,108.083Zm1.378,18.754a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,280.472,126.837Z" transform="translate(-132.531 -29.781)" style="fill: rgb(255, 255, 255);"></path></g><g id="jaune"><path class="cls-3" d="M145.252,38.933a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,145.252,38.933Zm19.181-1.41a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,164.433,37.523Zm95.9-7.05a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,260.337,30.472Zm-76.723,5.64a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,183.614,36.113ZM202.8,34.7a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,202.8,34.7Zm19.181-1.41a3.4,3.4,0,1,1-3.142,3.64A3.4,3.4,0,0,1,221.976,33.293Zm19.18-1.41a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,241.156,31.882Zm-86.233,138.6a3.4,3.4,0,1,1-3.141,3.639A3.4,3.4,0,0,1,154.923,170.486Zm19.181-1.41a3.4,3.4,0,1,1-3.141,3.639A3.4,3.4,0,0,1,174.1,169.076Zm95.9-7.051a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,270.008,162.025Zm-76.723,5.641a3.4,3.4,0,1,1-3.141,3.639A3.4,3.4,0,0,1,193.285,167.666Zm19.181-1.41a3.4,3.4,0,1,1-3.142,3.639A3.4,3.4,0,0,1,212.466,166.256Zm19.18-1.411a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,231.646,164.845Zm19.181-1.41a3.4,3.4,0,1,1-3.141,3.64A3.4,3.4,0,0,1,250.827,163.435ZM140,52.251a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,140,52.251Zm1.379,18.754A3.4,3.4,0,1,1,137.74,67.9,3.383,3.383,0,0,1,141.377,71.005Zm6.9,93.855a3.4,3.4,0,1,1-3.637-3.108A3.382,3.382,0,0,1,148.276,164.86ZM142.759,89.8a3.4,3.4,0,1,1-3.638-3.108A3.384,3.384,0,0,1,142.759,89.8ZM140.5,105.448a3.366,3.366,0,1,1-3.144,3.606A3.381,3.381,0,0,1,140.5,105.448Zm5.016,21.862a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,145.516,127.31Zm1.382,18.8A3.4,3.4,0,1,1,143.26,143,3.383,3.383,0,0,1,146.9,146.106ZM274.264,42.381a3.4,3.4,0,1,1-3.638-3.108A3.384,3.384,0,0,1,274.264,42.381Zm1.378,18.754a3.4,3.4,0,1,1-3.637-3.108A3.382,3.382,0,0,1,275.642,61.135Zm6.9,93.855a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,282.542,154.99Zm-5.518-75.059a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,277.024,79.931Zm-2.259,15.646a3.367,3.367,0,1,1-3.143,3.606A3.384,3.384,0,0,1,274.765,95.577Zm5.016,21.862a3.4,3.4,0,1,1-3.637-3.108A3.383,3.383,0,0,1,279.781,117.439Zm1.382,18.8a3.4,3.4,0,1,1-3.637-3.107A3.383,3.383,0,0,1,281.163,136.235Z" transform="translate(-133.219 -30.469)" style="fill: rgb(251, 205, 0);"></path></g></svg></div><img src="./promo.png" id="promo" class="promo" alt="promo" width="300" height="250" style="transform: matrix(1, 0, 0, 1, 0, 0);"> <img src="./footer.png" id="footer" alt="voir conditions" width="300" height="250" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> <svg id="logo" class="logo" xmlns="http://www.w3.org/2500/svg" width="83" height="58" viewBox="0 0 83 58" style="transform: matrix(0.47, 0, 0, 0.47, -170, -42); opacity: 1;"><title>logo</title><g id="orange" style="opacity: 0;"><path d="M125.2,321.8h.8v.5h0a1.1,1.1,0,0,1,1-.6,1.6,1.6,0,0,1,1.5,1.8c0,.9-.5,1.8-1.4,1.8a1.2,1.2,0,0,1-1-.5h0v1.5h-.9Zm2.4,1.7c0-.5-.2-1.1-.8-1.1s-.8.6-.8,1.1.2,1.1.8,1.1.8-.5.8-1.1" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M129,322.9c0-.9.8-1.2,1.5-1.2s1.5.2,1.5,1v1.7a1.9,1.9,0,0,0,.1.8h-.9c-.1-.1-.1-.2-.1-.4a1.6,1.6,0,0,1-1.1.5,1,1,0,0,1-1.1-1c0-.8.5-1,1.1-1s1.1-.1,1.1-.5-.3-.4-.6-.4-.6.1-.6.5Zm2.1.6a1.1,1.1,0,0,1-.8.2c-.3.1-.5.2-.5.5s.3.4.5.4a.7.7,0,0,0,.8-.7Z" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M132.7,321.8h.8v.7h0a1.2,1.2,0,0,1,1.1-.8h.2v.8h-.4c-.6,0-.8.5-.8,1.1v1.5h-.9Z" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M140.5,318.8c2.4,0,3.8,1.9,3.8,4.2s-1.4,4.1-3.8,4.1-3.8-1.8-3.8-4.1,1.4-4.2,3.8-4.2m0,6.9c1.6,0,2.1-1.4,2.1-2.7s-.5-2.7-2.1-2.7-2.1,1.3-2.1,2.7.6,2.7,2.1,2.7" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M145.4,321.2h1.4v1.1h0a2,2,0,0,1,1.8-1.3h.4v1.5h-.6c-1.1,0-1.5.8-1.5,1.8v2.6h-1.5Z" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M149.5,323c.1-1.5,1.4-2,2.7-2s2.4.3,2.4,1.7v3a3.3,3.3,0,0,0,.2,1.2h-1.5a.9.9,0,0,1-.1-.5,2.8,2.8,0,0,1-1.9.7,1.8,1.8,0,0,1-2-1.7c0-1.3,1-1.6,2-1.8s1.8-.1,1.8-.7-.5-.8-1-.8-1,.2-1,.9Zm3.6,1.1c-.3.3-.8.3-1.3.4s-.9.2-.9.8.4.7.9.7a1.2,1.2,0,0,0,1.3-1.3Z" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M155.8,321.2h1.5v.8h0a2.2,2.2,0,0,1,1.7-1c1.7,0,2.1,1,2.1,2.4v3.5h-1.5v-3.2c0-.9-.3-1.4-1-1.4s-1.2.5-1.2,1.6v3h-1.6Z" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M167.7,326.6c0,.9-.3,2.5-2.9,2.5s-2.4-.5-2.5-1.8h1.5a1.1,1.1,0,0,0,1.2.7c.8,0,1.2-.6,1.2-1.4v-.7h0a1.9,1.9,0,0,1-1.7.9c-1.7,0-2.4-1.3-2.4-2.9s.8-2.9,2.4-2.9a1.8,1.8,0,0,1,1.7,1h0v-.8h1.5Zm-1.5-2.6c0-.9-.3-1.8-1.3-1.8s-1.2.8-1.2,1.7.3,1.7,1.2,1.7,1.3-.8,1.3-1.6" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path><path d="M170.2,324.4c0,1,.5,1.5,1.4,1.5a1.3,1.3,0,0,0,1.2-.7h1.4a2.7,2.7,0,0,1-2.7,1.9,2.8,2.8,0,0,1-2.8-3,2.9,2.9,0,0,1,2.8-3.1,3,3,0,0,1,2.8,3.4Zm2.5-1a1.3,1.3,0,0,0-2.5,0Z" transform="translate(-108.4 -271.1)" style="fill:#de2554"></path></g><path id="forme-logo" d="M186.1,283.9l-.8,1.7-.7-1.7-.4,2.2h.3l.2-1.3.6,1.4.7-1.4.2,1.3h.3Zm-2.7,2.2h.3v-1.9h.4V284h-1.2v.2h.5Zm-5.1-.7a6.4,6.4,0,0,0-5.2,2.7v-6.9h-5.4v22.6h5.4V293.5a3.2,3.2,0,0,1,3.2-3.2c2.4,0,2.8,1.4,2.8,2.9v10.6h5.5V291.4a6.1,6.1,0,0,0-6.3-6m-20,5.4c0-.7.5-1,1.4-1a2.6,2.6,0,0,1,2.2,1.4l4-1.9a6.1,6.1,0,0,0-5.8-3.9c-3.9,0-6.8,2.3-6.8,5.9,0,6.3,8,5.1,8,7.4s-1.1,1.2-1.9,1.2a3.2,3.2,0,0,1-2.5-1.6l-4.2,2.2c1.4,2.6,3.6,3.7,6.6,3.7s7.1-2.1,7.1-6c0-6.2-8.1-5.3-8.1-7.4m-15.5-5.4a9.3,9.3,0,0,0-9.7,9.4,9.6,9.6,0,0,0,9.5,9.6,9.3,9.3,0,0,0,9.7-9.6,9.2,9.2,0,0,0-9.5-9.4m-15.9,5.1-2.4-1c-1.2-.5-2.5-.9-2.5-2.1a2,2,0,0,1,2.2-2c2.1,0,4.5,1.8,4.5,1.8l2.2-4.4a13.9,13.9,0,0,0-7.1-2.4c-3.9,0-7.6,2.7-7.6,7.2s1.5,5.2,4.4,6.5l3.3,1.4c2.1.8,2.3,1.2,2.3,2.2s-1.6,1.7-3.2,1.7a8.9,8.9,0,0,1-5.3-2.1l-2.3,4.5c2.3,1.5,4.6,2.8,7.7,2.8s8.8-2.5,8.8-7.3-1.7-5.5-5-6.8M191.4,308,111,313.9,108.4,277l80.3-5.9Z" transform="translate(-108.4 -271.1)" style="fill: rgb(251, 205, 0);"></path></svg><div id="mentions-link" style="visibility: visible;"></div></div><div id="mentions"><img src="./mentions-text.png" id="mentions-text"> <img src="./back.png" id="mentions-back" alt="Flèche de retour"></div></div><a href="javascript:window.open(window.clickTag,&#39; _blank&#39;);void(0);" id="clickTag"><span id="CTA" style="opacity: 1; transform: matrix(1, 0, 0, 1, -130.5, 0);">En profiter</span> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="></a><div id="mask" style="visibility: hidden; opacity: 0;"></div><script src="./scripts.min.js.téléchargement"></script></body></html>
